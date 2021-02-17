@@ -40,6 +40,11 @@ let Word = ""
 Word = ""
 Cword = ""
 code = ""
+let hemhaw = ["Hmm,", "Ah,", "Oh,"]
+let answers = ["I see.", "Okay.", "That's interesting."]
+let questions = ["What is the weather today?", "How are you feeling?", "What is your favorite book??", "Do you have a hobby?", "Can you swim?"]
+let state = 0
+basic.showString("Hi, I'm Morse! What is your name?")
 morse = [".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--..", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.", "-----"]
 alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
 basic.forever(function () {
