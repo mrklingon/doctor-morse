@@ -19,6 +19,9 @@ input.onButtonPressed(Button.A, function () {
     code = ""
 })
 input.onButtonPressed(Button.AB, function () {
+    basic.showString(Cword)
+    basic.pause(100)
+    basic.showString(Word)
     if (state == 2) {
         basic.showString("" + (hemhaw[randint(0, hemhaw.length - 1)]))
         basic.showString(Word)
@@ -36,9 +39,6 @@ input.onButtonPressed(Button.AB, function () {
         basic.showString("" + (questions[randint(0, questions.length)]))
         state = 2
     }
-    basic.showString(Cword)
-    basic.pause(100)
-    basic.showString(Word)
     Cword = ""
     Word = ""
 })
