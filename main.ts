@@ -19,8 +19,19 @@ input.onButtonPressed(Button.A, function () {
     code = ""
 })
 input.onButtonPressed(Button.AB, function () {
+    if (state == 2) {
+        basic.showString("" + (hemhaw[randint(0, hemhaw.length - 1)]))
+        basic.showString(Word)
+        basic.showString(name)
+        basic.showString("" + (answers[randint(0, answers.length - 1)]))
+        state = 1
+    }
+    if (state == 1) {
+        basic.showString("" + (questions[randint(0, questions.length - 1)]))
+        state = 2
+    }
     if (state == 0) {
-        name = Cword
+        name = Word
         basic.showString("Nice to meet you," + name)
         basic.showString("" + (questions[randint(0, questions.length)]))
         state = 2
@@ -43,14 +54,16 @@ let alphabet: string[] = []
 let morse: string[] = []
 let state = 0
 let questions: string[] = []
+let answers: string[] = []
+let hemhaw: string[] = []
 let code = ""
 let Cword = ""
 let Word = ""
 Word = ""
 Cword = ""
 code = ""
-let hemhaw = ["Hmm,", "Ah,", "Oh,"]
-let answers = ["I see.", "Okay.", "That's interesting."]
+hemhaw = ["Hmm,", "Ah,", "Oh,"]
+answers = ["I see.", "Okay.", "That's interesting."]
 questions = ["What is the weather today?", "How are you feeling?", "What is your favorite book??", "Do you have a hobby?", "Can you swim?"]
 state = 0
 basic.showString("Hi, I'm Morse! What is your name?")
